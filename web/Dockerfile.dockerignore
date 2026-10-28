@@ -1,0 +1,22 @@
+# ==============================================================================
+# WAS NICHT INS DOCKER-IMAGE KOMMT
+# ==============================================================================
+# Gilt automatisch für Dockerfile daneben (Name: <Dockerfile>.dockerignore).
+# Prinzip: erst alles ausschließen, dann gezielt erlauben.
+
+# Schließt ganzen Projektordner aus (auch model, Rohdaten, .venv)
+*
+# Erlaubt nur Ordner production und zentrale Konfiguration
+!production/
+!konfiguration.py
+
+# Beide Parquet-Dateien – API braucht nur fertige aml.db
+production/data/SAML-D_*.parquet
+# Hilfsdateien von SQLite
+production/data/*.db-wal
+production/data/*.db-shm
+# Python-Zwischenspeicher
+production/**/__pycache__
+# Ordner web (Dockerfile, Terraform, Zugangsdaten) bleibt durch "*" oben automatisch draußen
+# Mac-Systemdateien
+**/.DS_Store

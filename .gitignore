@@ -1,0 +1,28 @@
+# ==============================================================================
+# WAS NICHT INS GIT-REPOSITORY KOMMT
+# ==============================================================================
+
+# Persönliche Werte für Terraform (Abonnement-ID, E-Mail)
+web/terraform.tfvars
+# Zustand von Terraform – enthält Registry-Passwort im Klartext
+*.tfstate
+*.tfstate.*
+# Von "terraform init" heruntergeladene Provider (.terraform.lock.hcl bleibt drin)
+.terraform/
+
+# Daten (mehrere GB, liegen im GitHub-Release, Rohdaten von Kaggle, siehe README)
+# Ordner selbst bleiben im Repository (durch leere Datei .gitkeep)
+model/data/*
+!model/data/.gitkeep
+production/data/*
+!production/data/.gitkeep
+
+# Virtuelle Umgebung (lässt sich jederzeit neu anlegen)
+.venv/
+
+# Python-Zwischenspeicher
+__pycache__/
+.pytest_cache/
+
+# Mac-Systemdateien
+.DS_Store

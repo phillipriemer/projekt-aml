@@ -1,8 +1,7 @@
 # AML-Projekt – Geldwäscheerkennung mit Stream
 
-Projekt im IU-Kurs DLBDSMTP01_D (Machbarkeitsstudie). Ein LightGBM-Modell bewertet Transaktionen
-über eine FastAPI in Echtzeit, ein Simulator schickt dafür Transaktionen als Stream an die API.
-Verdächtige Transaktionen erscheinen auf der Monitoring-Seite `/alarme`.
+Ein LightGBM-Modell bewertet Transaktionen über eine FastAPI in Echtzeit, ein Simulator schickt dafür 
+Transaktionen als Stream an die API. Verdächtige Transaktionen erscheinen auf der Monitoring-Seite `/alarme`.
 
 ## Projektstruktur
 
